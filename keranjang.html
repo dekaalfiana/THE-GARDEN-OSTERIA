@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeri Menu Osteria</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d2e1e;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #003c26;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4c542;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f4c542;
+      margin: 30px 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+
+    .photo {
+      width: 30%;
+      background-color: #123c28;
+      border: 1px solid #2e5a3d;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .photo:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .photo p {
+      margin: 10px 0 5px;
+      font-weight: bold;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: #f4c542;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .btn-pesan {
+      background-color: #f4c542;
+      color: #0d2e1e;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-pesan:hover {
+      background-color: #e6b800;
+    }
+
+    @media (max-width: 768px) {
+      .photo {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="list menu.pdf">List Menu</a> |
+    <a href="about.html">About Me</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="keranjang.html">Cart</a> |
+    <a href="checkout.html">Checkout</a>
+  </nav>
+
+  <h1>Galeri Menu Osteria</h1>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="grilled chicken.jpg" alt="Grilled Chicken Steak">
+      <p>Grilled Chicken Steak</p>
+      <div class="desc">Dengan creamy mushroom sauce.</div>
+      <div class="price">Rp 85.000</div>
+      <button class="btn-pesan" onclick="pesan('Grilled Chicken Steak', 85000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="beef bulgogi.jpg" alt="Korean Beef Bulgogi">
+      <p>Korean Beef Bulgogi</p>
+      <div class="desc">Daging sapi manis gurih dan nasi.</div>
+      <div class="price">Rp 105.000</div>
+      <button class="btn-pesan" onclick="pesan('Korean Beef Bulgogi', 105000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="spaghetti aglio e olio.jpg" alt="Spaghetti Aglio E Olio">
+      <p>Spaghetti Aglio E Olio</p>
+      <div class="desc">Pasta dengan garlic & parsley.</div>
+      <div class="price">Rp 90.000</div>
+      <button class="btn-pesan" onclick="pesan('Spaghetti Aglio E Olio', 90000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="iced lemon tea.jpg" alt="Iced Lemon Tea">
+      <p>Iced Lemon Tea</p>
+      <div class="desc">Teh lemon segar & dingin.</div>
+      <div class="price">Rp 20.000</div>
+      <button class="btn-pesan" onclick="pesan('Iced Lemon Tea', 20000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="soft drink.jpg" alt="Soft Drink">
+      <p>Soft Drink</p>
+      <div class="desc">Pilihan minuman soda dingin.</div>
+      <div class="price">Rp 15.000</div>
+      <button class="btn-pesan" onclick="pesan('Soft Drink', 15000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="mineral water.jpg" alt="Mineral Water">
+      <p>Mineral Water</p>
+      <div class="desc">Air mineral dingin & segar.</div>
+      <div class="price">Rp 10.000</div>
+      <button class="btn-pesan" onclick="pesan('Mineral Water', 10000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="garlic bread.jpg" alt="Garlic Bread">
+      <p>Garlic Bread</p>
+      <div class="desc">Roti bawang panggang renyah.</div>
+      <div class="price">Rp 22.000</div>
+      <button class="btn-pesan" onclick="pesan('Garlic Bread', 22000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="french fries.jpg" alt="French Fries">
+      <p>French Fries</p>
+      <div class="desc">Kentang goreng krispi & gurih.</div>
+      <div class="price">Rp 25.000</div>
+      <button class="btn-pesan" onclick="pesan('French Fries', 25000)">Pesan Sekarang</button>
+    </div>
+
+    <div class="photo">
+      <img src="bruscatte.jpg" alt="Bruschetta">
+      <p>Bruschetta</p>
+      <div class="desc">Roti Italia dengan tomat segar.</div>
+      <div class="price">Rp 28.000</div>
+      <button class="btn-pesan" onclick="pesan('Bruschetta', 28000)">Pesan Sekarang</button>
+    </div>
+  </div>
+
+  <script>
+    function pesan(name, price) {
+      const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cart.push({ name, price });
+      localStorage.setItem('cartItems', JSON.stringify(cart));
+      window.location.href = 'checkout.html';
+    }
+  </script>
+
+</body>
+</html>
+ 
